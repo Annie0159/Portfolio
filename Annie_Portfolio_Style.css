@@ -235,6 +235,53 @@ section{
     margin: 3rem 0;
 }
 
+.skills{
+    background-color: var(--main-color);
+    margin: 0;
+}
+.skills_container {
+    display: flex;
+    justify-content: center; /* Center the grid */
+    align-items: center; /* Center vertically if needed */
+    margin-bottom: 15rem;
+
+}
+
+.skills_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between images */
+    max-width: 1000px; /* Optional: Set a max width for the grid */
+    width: 100%; /* Allow grid to take full width */
+}
+
+.skills_grid img {
+    width:50%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
+.collaboration_container {
+    display: flex;
+    justify-content: center; /* Center the grid */
+    align-items: center; /* Center vertically if needed */
+    margin-bottom: 10rem;
+}
+
+.collaboration_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 60px; /* Space between images */
+    max-width: 1000px; /* Optional: Set a max width for the grid */
+    width: 100%; /* Allow grid to take full width */
+}
+
+.collaboration_grid img {
+    width:100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+}
+
 /* qualification section style */
 .qualification{
     padding:50px 15px;
@@ -754,6 +801,10 @@ input::-webkit-inner-spin-button {
         padding: 10rem 3% 2rem;
     }
 
+    .collaboration_grid {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr)); /* Responsive columns */
+    }
+
     .contact .box {
         flex-direction: column;
     }
@@ -774,6 +825,16 @@ input::-webkit-inner-spin-button {
     html{
         font-size: 50%;
     }
+
+    .skills_grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+    }
+
+    .collaboration_grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+        gap:55px;
+    }
+
     .home .home-content{
         margin-right: 10rem;
         max-width: 50rem;
@@ -877,6 +938,11 @@ input::-webkit-inner-spin-button {
         margin: 2.5rem .75rem 3rem;
     }
 
+    .collaboration_grid {
+        grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); /* Responsive columns */
+        gap:50px;
+    }
+
     .timeline-content{
         padding: 12px 12px;        
     }
@@ -959,6 +1025,16 @@ input::-webkit-inner-spin-button {
     .home-content h1{
         font-size: 3rem;
     }
+
+    .skills_grid {
+        grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); /* Responsive columns */
+    }
+
+    .collaboration_grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive columns */
+        gap:30px;
+    }
+
     .about-img{
         height: 275px;
         width: 200px;
