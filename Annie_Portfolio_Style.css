@@ -536,23 +536,111 @@ section{
 }
 
 .contact .box #pop-up{
-    font-size: 3rem;    
-    position: absolute;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    background-color: transparent;
-    opacity: 0.7;
-    padding: 10px;
-    z-index: -1;
-    color: white;
-    text-decoration: wavy;
-    text-align: center;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  visibility: hidden;
 }
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loader {
+    border: 6px solid #f3f3f3; /* Light gray */
+    border-top: 6px solid #4CAF50; /* Green */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.checkmark-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50; /* Green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Checkmark */
+  .checkmark {
+    width: 20px;
+    height: 10px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(-45deg);
+    position: absolute;
+  }
+
+  .warning-icon {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid #ffcc00; /* Yellow color for warning */
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+  }
+  
+  /* Exclamation mark inside the triangle */
+  .warning-icon .exclamation {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: #333; /* Dark color for contrast */
+  }
+
+  /* Error icon (circle) */
+.error-icon {
+    width: 60px; /* Width of the circle */
+    height: 60px; /* Height of the circle */
+    background-color: #f44336; /* Red color for error */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    position: relative;
+    margin: 20px;
+  }
+  
+  /* Cross mark inside the circle */
+  .error-icon .cross {
+    font-size: 36px; /* Size of the cross */
+    color: white; /* White color for contrast */
+  }
 
 .contact .box .form {
     flex: 1 1 45%;
@@ -640,6 +728,7 @@ section{
     flex: 1 1 100%;
     margin-bottom: 15px;
     display: flex;
+    flex-direction: column;
 }
 
 .contact .form-group input,
@@ -658,9 +747,6 @@ section{
 
 .contact .form-group small{
     visibility: hidden;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 
 .contact .form-group.error small{

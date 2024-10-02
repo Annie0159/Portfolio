@@ -73,10 +73,14 @@ form.addEventListener('submit', function(e) {
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  popup.innerHTML = "Please wait..."
-  popup.style.backgroundColor = 'gray';
-  popup.style.zIndex = '1';
-  popup.style.display = "flex";
+  popup.innerHTML = `
+                    <div class="popup-content">
+                      <div class="icon-container">
+                        <div class="loader"></div>
+                      </div>
+                      <h2>Please Wait.....</h2>
+                    </div>`;
+  popup.style.visibility = "visible";
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -89,26 +93,50 @@ form.addEventListener('submit', function(e) {
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
-               popup.innerHTML = json.message + " Thank You.";
-               popup.style.backgroundColor = '#228B22';
+               popup.innerHTML = `
+                    <div class="popup-content">
+                      <div class="icon-container">
+                        <div class="checkmark-circle">
+                          <div class="checkmark"></div>
+                        </div>
+                      </div>
+                      <h2> Thank You! </h2>
+                      <p>${json.message}</p>
+                    </div>`;
             } else {
                 console.log(response);
-                popup.innerHTML = json.message;
-               popup.style.backgroundColor = 'yellow';
+                popup.innerHTML = `
+                    <div class="popup-content">
+                      <div class="icon-container">
+                        <div class="warning-icon">
+                           <span class="exclamation">!</span>
+                        </div>
+                      </div>
+                      <h2> Something went wrong! Try Again.</h2>
+                      <p>${json.message}</p>
+                    </div>`;
             }
         })
         .catch(error => {
             console.log(error);
-            popup.innerHTML = "Something went wrong! Try Again.";
-            popup.style.backgroundColor = 'red';
+            popup.innerHTML = `
+                    <div class="popup-content">
+                      <div class="icon-container">
+                        <div class="error-icon">
+                           <span class="cross">✖</span>
+                        </div>
+                      </div>
+                      <h2> Error </h2>
+                      <p>Kindly reach out through the email provided in the website.</p>
+                    </div>`;
         })
         .then(function() {
             form.reset();
             setTimeout(() => {
-               popup.style.display = "none";
+               popup.style.visibility = "hidden";
             }, 3000);
         });
-      }
+   }
 });
 
 
@@ -122,28 +150,29 @@ function checkInputs() {
 
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
+      flag =0;
 	} else {
 		setSuccessFor(username);
-      flag=0;
 	}
 	
 	if(emailValue === '') {
 		setErrorFor(email, 'Email cannot be blank');
+      flag=0;
 	} else if (!isEmail(emailValue)) {
 		setErrorFor(email, 'Not a valid email');
+      flag=0;
 	} else {
 		setSuccessFor(email);
-      flag=0;
 	}
 	
 	if(messageValue === '') {
 		setErrorFor(message, 'Message cannot be blank');
+      flag=0;
 	} else {
 		setSuccessFor(message);
-      flag=0;
 	}
 
-   return flag==0 ? true: false;
+   return flag==1 ? true: false;
 
 }
 
