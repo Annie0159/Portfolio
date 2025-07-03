@@ -9,24 +9,25 @@
 }
 
 :root{
-    --bg-color: #fdfdfd;
-    --text-color: #333;
-    --main-color: #F6F5F2;
-    --second-color: #76453B;
-    --header-color: #e0d5c7;
+    --bg-color: #FAF6F0;
+    --text-color: #3E2C23;
+    --main-color: #FAF4EF;
+    --second-color: #8B5E3C;
+    --header-color: #E0D3C2;
     --shadow-color: rgba(0,0,0,.2);
     --popup-color: #666;
-    --imgbg-color: #B19470;
+    --imgbg-color: #E0D3C2;
 }
 
 .dark-mode{
-    --bg-color: #121212;
-    --text-color: #fdfdfd;
+    --bg-color: #3B2F2F;
+    --text-color: #F9FAFB;
     --main-color: #1d1b1b;
-    --second-color: #76453B;
-    --header-color: #181818;
+    --second-color: #ac6152;
+    --header-color: #463128;
     --shadow-color: rgba(0,0,0,.7);
     --overlay-color: #1d1b1b;
+    --imgbg-color: #463128;
 }
 
 html{
@@ -113,39 +114,41 @@ span{
 }
 
 #menu-icon{
-    font-size: 3.6rem;
+    font-size: 3.2rem;
     color: var(--text-color);
     display:none;
 }
 
 section{    
     min-height: 85vh;
-    padding: 10rem 7% 2rem;
+    padding: 4rem;
 }
 
 /* home section style */
 .home{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, var(--bg-color) 0%, var(--main-color) 100%);
 }
 
 .home .home-content{
-    max-width: 50rem;
-    margin-right: 10rem;
+    max-width: 50%;
+    margin-right: 5rem;
+    line-height: 23px;
 }
 
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
-    line-height: .3;
+    line-height: .5;
 }
 
 .home-content h1{
     font-size: 4rem;
     font-weight: 700;
-    margin: 1rem 0 2rem 0;
+    margin: 1.5rem 0 2rem 0;
 }
 
 .home-content p{
@@ -226,7 +229,7 @@ section{
     height: 325px;
     width: 250px;
     padding: 1rem;
-    background-color: var(--imgbg-color);
+    background-color: var(--header-color);
 }
 
 .heading{
@@ -235,30 +238,88 @@ section{
     margin: 3rem 0;
 }
 
+/* skills section style */
+
+.skills_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skills_box {
+    background-color: var(--imgbg-color);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skills_box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skills_box h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.skills_box ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills_box ul li {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
 .skills{
     background-color: var(--main-color);
     margin: 0;
 }
-.skills_container {
-    display: flex;
-    justify-content: center; /* Center the grid */
-    align-items: center; /* Center vertically if needed */
-    margin-bottom: 15rem;
 
+.skills_rolling_container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.skills_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between images */
-    max-width: 1000px; /* Optional: Set a max width for the grid */
-    width: 100%; /* Allow grid to take full width */
+.skills_rolling_grid {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+    min-width: 200%;
 }
 
-.skills_grid img {
-    width:50%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+.skills_rolling_grid img {
+  width: 100px;
+  height: 75px;
+  margin: 0 10px;
+  border-radius: 5px;
+  object-fit: contain; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+    @keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .collaboration_container {
@@ -270,8 +331,8 @@ section{
 
 .collaboration_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 60px; /* Space between images */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 40px; /* Space between images */
     max-width: 1000px; /* Optional: Set a max width for the grid */
     width: 100%; /* Allow grid to take full width */
 }
@@ -279,7 +340,9 @@ section{
 .collaboration_grid img {
     width:100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */
+    object-fit: contain;
+    aspect-ratio: 16 / 10;/* or 1 / 1 for square, 16 / 9 for wide */
+    border-radius: 12px; /* optional for nice rounded corners */
 }
 
 /* qualification section style */
@@ -809,28 +872,28 @@ input::-webkit-inner-spin-button {
 /* Responsive styles */
 @media (max-width: 1920px) {
     html{
-        font-size: 65%;
+        font-size: 70%;
     }
     section{    
         min-height: 90vh;
     }
-    .home-img img{
+    /* .home-img img{
         height: 400px;
         width: 310px;
     }
     .home-img{
         height: 400px;
         width: 310px;
-    }
+    } */
 }
 
 @media (max-width: 1280px) {
     html{
         font-size: 60%;
     }
-    .home-content h1 {
+    /* .home-content h1 {
         font-size: 4rem;
-    }
+    } */
 
     .timeline-date{
         font-size: 17px;
@@ -909,7 +972,7 @@ input::-webkit-inner-spin-button {
 
 @media(max-width:991px){
     html{
-        font-size: 50%;
+        font-size: 55%;
     }
 
     .skills_grid {
@@ -921,7 +984,7 @@ input::-webkit-inner-spin-button {
         gap:55px;
     }
 
-    .home .home-content{
+    /* .home .home-content{
         margin-right: 10rem;
         max-width: 50rem;
     }
@@ -933,7 +996,7 @@ input::-webkit-inner-spin-button {
     .home-img img{
         height: 250px;
         width: 200px;
-    }
+    } */
     footer{
         padding: 2rem 3%;
     }
@@ -962,6 +1025,24 @@ input::-webkit-inner-spin-button {
     }  
     .home-img img{
         display: none;
+    }
+    .home .home-content{
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .home-content p{
+        font-size: 1.6rem;
+        margin: 0;
+    }
+    .logo{
+        margin-right : auto;
+        margin-left: 20px;
+        height: 40px;
+        width: 40px;
+    }
+
+    #darkMode-icon{
+        right: 6rem;
     }
     .navBar{
         position: absolute;
@@ -1012,17 +1093,6 @@ input::-webkit-inner-spin-button {
         text-align: center;
     }
 
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-
-    .home-content h1{
-        font-size: 4rem;
-    }
-
-    .home-content .social-media a{
-        margin: 2.5rem .75rem 3rem;
-    }
 
     .collaboration_grid {
         grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); /* Responsive columns */
@@ -1106,12 +1176,12 @@ input::-webkit-inner-spin-button {
 /* std */
 @media (max-width: 610px) {
     html{
-        font-size: 40%;
-    }
-    .home-content h1{
-        font-size: 3rem;
+        font-size: 45%;
     }
 
+    #darkMode-icon{
+        right: 5rem;
+    }
     .skills_grid {
         grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); /* Responsive columns */
     }
@@ -1168,11 +1238,9 @@ input::-webkit-inner-spin-button {
 
 @media(max-width: 450px){
     html{
-        font-size: 30%;
+        font-size: 40%;
     }
-    #darkMode-icon{
-        right: 6rem;
-    }
+    
 
     .home{
         padding: 0 3% 30rem ;
