@@ -501,12 +501,12 @@ section{
 }
 
 .project-card .project-title{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .project-card p{
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
+    font-size: 1.5rem;
+    margin: .3rem 0 ;
 }
 
 .project-card a{
@@ -514,9 +514,9 @@ section{
     justify-content: center;
     align-items: center;
     width: 5rem;
-    height: 5rem;
+    height: 3rem;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 .project-card a i{
@@ -768,7 +768,6 @@ section{
 .contact .info-details li a {
     color: var(--text-color);
     text-decoration: none;
-    pointer-events: none;
 }
 
 .contact .info-details li a:hover {
