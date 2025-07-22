@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
         <!-- header section -->
         <header class="header">
             <img class="logo" src="Images/Logo.png">
@@ -21,8 +20,8 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <div class="bx bx-moon" id="darkMode-icon">
-            </div>
+            <!-- <div class="bx bx-moon" id="darkMode-icon">
+            </div> -->
             <div class="bx bx-menu" id="menu-icon"></div>
         </header>
 
@@ -42,10 +41,19 @@
 
                 <h3>Hey, it's</h3>
                 <h1>Annie Prasanna</h1>
+
+                <div class="my-roles">
+                        <span class="role active">Graduate Student in Computer Engineering</span>
+                        <span class="role">Research Assistant</span>
+                        <span class="role">Software Engineer</span>
+                        <span class="role">Teaching Assistant</span>
+                        <span class="role">AI Engineer</span>
+                        <span class="role">Validation Engineer</span>
+                </div>
+
                 <p>
                     Graduate student in Computer Engineering at the University of Arkansas, Fayetteville, with experience as a Teaching Assistant in core computing courses. Skilled in data structures, algorithms, and software development, with industry experience at Soliton Technologies developing automation frameworks in C#, LabVIEW, and Python. </p><p>Passionate about engineering, innovation, and real-world problem-solving. <br>Feel free to connect with me!
                 </p>
-                
                 <a href="#contact" class="primarybtn">Let's Talk</a>
                 <a href="CV/Annie Resume.pdf" download class="secondbtn">Download CV</a>
 
@@ -54,6 +62,11 @@
             <div class="home-img">
                 <img src="Images/MyImage.png">
             </div>
+            <div class="scroll">
+                <span>Scroll Down </span>
+                <i class='bx bx-down-arrow-alt'></i>
+            </div>
+
         </section>
         
         <!-- skills section -->
@@ -302,84 +315,120 @@
 
         <!-- projects section -->
         <section class="latest-projects" id="projects">
-            <h2 class="heading">Latest <span>Projects</span></h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <img src="Images/Project 9 Image.jpg" alt="Project 9 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Resume Classifier</h3>
-                        <p>A machine learning project that classifies resumes into job categories such as Software Engineer, Data Scientist, Web Developer, Product Manager, Python Developer, Sales, etc.</p>
-                        <a href="https://github.com/Annie0159/ResumeClassifier"><i class="bx bx-link-external"></i></a>
+            <h2 class="heading"> Projects</h2>
+
+            <div class="category-folders">
+                <div class="category-folder" data-category="ai">
+                    <div class="folder-preview">
+                        <img src="Images/Project 9 Image.jpg" alt="Resume Classifier Preview">
+                        <img src="Images/Project 8 Image.jpg" alt="Digit Classifier Preview">
+                        <img src="Images/Project 7 Image.jpg" alt="MiGa Preview">
                     </div>
+                    <span class="folder-title">AI Projects</span>
                 </div>
 
-                <div class="project-card">
-                    <img src="Images/Project 8 Image.jpg" alt="Project 8 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Digit Classifier</h3>
-                        <p>A full-stack machine learning web app that allows users to draw a digit (0–9) on a canvas and get a prediction using a trained deep learning model.</p>
-                        <a href="git@github.com:Annie0159/DigitClassifier.git"><i class="bx bx-link-external"></i></a>
+                <div class="category-folder" data-category="electronics">
+                    <div class="folder-preview">
+                        <img src="Images/Project 1 Image.jpg" alt="MAV Suite Preview">
+                        <img src="Images/Project 5 Image.jpg" alt="Intelligent Car Parking System Preview">
+                        <img src="Images/Project 6 Image.jpg" alt="Street Light Monitering System Preview">
                     </div>
+                    <span class="folder-title">Electronics Projects</span>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 7 Image.jpg" alt="Project 7 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">MiGa: Multi-Chicken Gait Assessment</h3>
-                        <p>A computer vision system that automatically assesses the gait of multiple chickens using detection, pose estimation, tracking, and gait-score regression. We introduce the GAIT dataset suite, which includes dedicated datasets for each process.</p>
-                        <a href="https://uark-aicv.github.io/MiGa/"><i class="bx bx-link-external"></i></a>
+
+                <div class="category-folder" data-category="rf">
+                    <div class="folder-preview">
+                        <img src="Images/Project 3 Image.png" alt="Biosensing Antenna Preview">
+                        <img src="Images/Project 4 Image.jpeg" alt="Antenna Design for 5G Preview">
                     </div>
+                    <span class="folder-title">RF Projects</span>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 1 Image.jpg" alt="Project 1 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">MAV Suite</h3>
-                        <p>To detect defects in microchips by first using YOLO v7 image processing to identify defective pins and then validating functionality through a LabVIEW simulation by comparing the microchip's output with that of an ideal microchip.</p>
-                        <!-- <a href="https://example.com"><i class="bx bx-link-external"></i></a> -->
+
+                <div class="category-folder" data-category="others">
+                    <div class="folder-preview">
+                        <img src="Images/Project 2 Image.png" alt="Snake Game Preview">
+                        <img src="Images/Project 10 Image.png" alt="To-do List Preview">
                     </div>
+                    <span class="folder-title">Other Projects</span>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 3 Image.png" alt="Project 3 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Biosensing antenna for seizure detection</h3>
-                        <p>Developed a design for seizure detection device which uses a microstrip patch antenna as a biosensor. The antenna detects changes in muscle permittivity as the base for detecting seizures.</p>
-                        <!-- <a href="https://example.com"><i class="bx bx-link-external"></i></a> -->
-                    </div>
+
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 4 Image.jpeg" alt="Project 4 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Design and analysis of antenna for 5G application</h3>
-                        <p>An efficient antenna is designed using ANSYS HFSS tool  is simulated, optimized, and fabricated.</p>
-                        <!-- <a href="https://example.com"><i class="bx bx-link-external"></i></a> -->
-                    </div>
+
+            <div id="projectData" style="display: none;">
+                <div class="project-item" data-category="ai">
+                    <img src="Images/Project 7 Image.jpg" alt="MiGa Image">
+                    <h3 class="project-title">MiGa: Multi-Chicken Gait Assessment</h3>
+                    <p>A computer vision system that automatically assesses the gait of multiple chickens using detection, pose estimation, tracking, and gait-score regression. We introduce the GAIT dataset suite, which includes dedicated datasets for each process.</p>
+                    <a href="https://uark-aicv.github.io/MiGa/">View Project</a>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 2 Image.png" alt="Project 2 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Snake Game</h3>
-                        <p>A game developed in c++ that allows the user to navigate the snake to consume food and grow longer using arrow keys. The game demonstrates effective use of OOP concepts to create a fun and engaging gaming experience.</p>
-                        <a href="https://github.com/Annie0159/SnakeGame"><i class="bx bx-link-external"></i></a>
-                    </div>
+                <div class="project-item" data-category="ai">
+                    <img src="Images/Project 9 Image.jpg" alt="Resume Classifier Image">
+                    <h3>Resume Classifier</h3>
+                    <p>A machine learning project that classifies resumes into job categories such as Software Engineer, Data Scientist, Web Developer, Product Manager, Python Developer, Sales, etc.</p>
+                    <a href="https://github.com/Annie0159/ResumeClassifier" target="_blank">View Project</a>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 5 Image.jpg" alt="Project 5 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Intelligent Car Parking System</h3>
-                        <p>An intelligent car parking system that helps drivers book parking spots through a Cloud-based IoT system.</p>
-                        <a target=”_blank” href="https://ieeexplore.ieee.org/document/9588971"><i class="bx bx-link-external"></i></a>
-                    </div>
+                <div class="project-item" data-category="ai">
+                    <img src="Images/Project 8 Image.jpg" alt="Digit Classifier Image">
+                    <h3>Digit Classifier</h3>
+                    <p>A full-stack machine learning web app that allows users to draw a digit (0 to 9) on a canvas and get a prediction using a trained deep learning model.</p>
+                    <a href="https://github.com/Annie0159/DigitClassifier" target="_blank">View Project</a>
                 </div>
-                <div class="project-card">
-                    <img src="Images/Project 6 Image.jpg" alt="Project 5 Image" class="project-image">
-                    <div class="project-info">
-                        <h3 class="project-title">Automate Street Light</h3>
-                        <p>A model that implements an energy-efficient power generating system that automates street lights based on the traffic density.</p>
-                        <a target=”_blank” href="https://ieeexplore.ieee.org/document/9418389"><i class="bx bx-link-external"></i></a>
-                    </div>
+
+                <div class="project-item" data-category="electronics">
+                    <img src="Images/Project 1 Image.jpg" alt="MAV Suite Preview">
+                    <h3>MAV Suite</h3>
+                    <p>To detect defects in microchips by first using YOLO v7 image processing to identify defective pins and then validating functionality through a LabVIEW simulation by comparing the microchip's output with that of an ideal microchip.</p>
+                </div>
+                <div class="project-item" data-category="electronics">
+                    <img src="Images/Project 5 Image.jpg" alt="Intelligent Car Parking System Preview">
+                    <h3>Intelligent Car Parking System</h3>
+                    <p>An intelligent car parking system that helps drivers book parking spots through a Cloud-based IoT system.</p>
+                    <a target=”_blank” href="https://ieeexplore.ieee.org/document/9588971">View Project</a>
+                    
+                </div>
+                <div class="project-item" data-category="electronics">
+                    <img src="Images/Project 6 Image.jpg" alt="Street Light Monitering System Preview">
+                    <h3>Automate Street Light</h3>
+                    <p>A System that implements an energy-efficient power generating system that automates street lights based on the traffic density.</p>
+                    <a target=”_blank” href="https://ieeexplore.ieee.org/document/9418389">View Project</a>
+                </div>
+
+                <div class="project-item" data-category="rf">
+                    <img src="Images/Project 3 Image.png" alt="Biosensing Antenna Image">
+                    <h3>Biosensing antenna for seizure detection</h3>
+                    <p>Developed a design for seizure detection device which uses a microstrip patch antenna as a biosensor. The antenna detects changes in muscle permittivity as the base for detecting seizures.</p>    
+                </div>
+                <div class="project-item" data-category="rf">
+                    <img src="Images/Project 4 Image.jpeg" alt="Antenna Design for 5G Image">
+                    <h3>Design and analysis of antenna for 5G application</h3>
+                    <p>An efficient antenna is designed using ANSYS HFSS tool  is simulated, optimized, and fabricated.</p>
+                </div>
+
+                <div class="project-item" data-category="others">
+                    <img src="Images/Project 2 Image.png" alt="Snake Game Image">
+                    <h3>Snake Game</h3>
+                    <p>A game developed in c++ that allows the user to navigate the snake to consume food and grow longer using arrow keys. The game demonstrates effective use of OOP concepts to create a fun and engaging gaming experience.</p>
+                    <a href="https://github.com/Annie0159/SnakeGame">View Project</a>
+                </div>
+                <div class="project-item" data-category="others">
+                    <img src="Images/Project 10 Image.png" alt="To-do List Image">
+                    <h3>To-do List</h3>
+                    <p>A simple and clean To-Do List web application built with Flask, MySQL, and HTML/CSS. You can add, view, mark as done, and delete your tasks through a user-friendly interface.</p>
+                    <a href="https://github.com/Annie0159/todolist">View Project</a>
+                </div>
+
+                </div>
+
+            <div id="projectModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 id="modalCategoryTitle"></h3>
+                    <div class="modal-project-list">
+                        </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- about me section -->
         <section class="about" id="about">
             <div class="about-img">

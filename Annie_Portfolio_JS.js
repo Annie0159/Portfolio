@@ -25,11 +25,11 @@ window.onscroll = () => {
    });
 };
 
-let darkModeIcon = document.querySelector('#darkMode-icon');
-darkModeIcon.onclick = () => {
-   darkModeIcon.classList.toggle('bx-sun');
-   document.body.classList.toggle('dark-mode');
-};
+// let darkModeIcon = document.querySelector('#darkMode-icon');
+// darkModeIcon.onclick = () => {
+//    darkModeIcon.classList.toggle('bx-sun');
+//    document.body.classList.toggle('dark-mode');
+// };
 
 ScrollReveal({
    reset : true,
@@ -40,6 +40,19 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content .heading', {origin: 'top'});
 // ScrollReveal().reveal('.home-img img, .project-list', '.form', {origin: 'bottom'});
+
+const roles = document.querySelectorAll('.role');
+let currentRoleIndex = 0;
+
+function rotateRoles() {
+    roles[currentRoleIndex].classList.remove('active');
+    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+    roles[currentRoleIndex].classList.add('active');
+}
+
+// Start role rotation
+setInterval(rotateRoles, 3000);
+
 
 //About Me Page
 document.addEventListener("DOMContentLoaded", function() {
@@ -237,7 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
             abstract: 'A comprehensive study on advanced Multiple-Input Multiple-Output (MIMO) techniques and their potential to enhance data throughput and spectral efficiency for future wireless communication systems.',
             link: 'https://example.com/pub6-link' // Replace with actual link
         },
-        // Add more publication objects here
     ];
 
     const pubTags = document.querySelectorAll('.pub-tag');
@@ -256,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
         viewerLink.href = publication.link;
         viewerLink.setAttribute('aria-label', `View publication: ${publication.title}`);
 
-        // Hide placeholder and show content with transition
         viewerPlaceholder.style.display = 'none';
         viewerContent.classList.add('active');
     };
@@ -266,9 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const pubId = tag.dataset.id;
             const selectedPub = publicationsData.find(pub => pub.id === pubId);
 
-            // Remove active class from all tags
             pubTags.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked tag
             tag.classList.add('active');
 
             if (selectedPub) {
@@ -277,9 +286,86 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Load the first publication details by default on page load
     if (publicationsData.length > 0) {
-        pubTags[0].classList.add('active'); // Highlight first tag
+        pubTags[0].classList.add('active'); 
         updateViewer(publicationsData[0]);
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryFolders = document.querySelectorAll('.category-folder'); 
+    const projectModal = document.getElementById('projectModal');
+    const closeButton = document.querySelector('.close-button');
+    const modalCategoryTitle = document.getElementById('modalCategoryTitle');
+    const modalProjectList = document.querySelector('.modal-project-list');
+    const projectDataContainer = document.getElementById('projectData'); 
+
+    const categoryMap = {
+        'ai': 'AI Projects',
+        'electronics': 'Electronics Projects',
+        'rf': 'RF Projects',
+        'others': 'Other Projects'
+    };
+
+    const openModal = (category) => {
+        modalCategoryTitle.textContent = categoryMap[category] || 'Projects'; 
+
+        modalProjectList.innerHTML = ''; 
+
+        const projectsInCategory = projectDataContainer.querySelectorAll(`.project-item[data-category="${category}"]`);
+
+        projectsInCategory.forEach(projectItem => {
+            const projectCard = document.createElement('div');
+            projectCard.classList.add('project-card');
+
+            const img = projectItem.querySelector('img') ? projectItem.querySelector('img').cloneNode(true) : null;
+            const title = projectItem.querySelector('h3') ? projectItem.querySelector('h3').cloneNode(true) : null;
+            const paragraph = projectItem.querySelector('p') ? projectItem.querySelector('p').cloneNode(true) : null;
+            const link = projectItem.querySelector('a') ? projectItem.querySelector('a').cloneNode(true) : null;
+
+            const projectInfo = document.createElement('div');
+            projectInfo.classList.add('project-info');
+            if (title) projectInfo.appendChild(title);
+            if (paragraph) projectInfo.appendChild(paragraph);
+            if (link) projectInfo.appendChild(link);
+
+            if (img) projectCard.appendChild(img);
+            projectCard.appendChild(projectInfo);
+
+            modalProjectList.appendChild(projectCard);
+        });
+
+        projectModal.style.display = 'flex'; 
+        document.body.style.overflow = 'hidden'; 
+    };
+
+    const closeModal = () => {
+        projectModal.style.display = 'none';
+        document.body.style.overflow = ''; 
+        categoryFolders.forEach(folder => folder.classList.remove('active'));
+    };
+
+    categoryFolders.forEach(folder => {
+        folder.addEventListener('click', () => {
+            categoryFolders.forEach(f => f.classList.remove('active'));
+            folder.classList.add('active');
+
+            const category = folder.dataset.category;
+            openModal(category);
+        });
+    });
+
+    closeButton.addEventListener('click', closeModal);
+
+    window.addEventListener('click', (event) => {
+        if (event.target == projectModal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && projectModal.style.display === 'flex') {
+            closeModal();
+        }
+    });
 });
