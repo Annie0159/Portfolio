@@ -14,7 +14,9 @@
             <nav class="navBar">
                 <a href="#home" class="active">Home</a>
                 <a href="#skills" >Skills</a>
-                <a href="#qualification">Background</a>
+                <a href="#experience">Experience</a>
+                <a href="#qualification">Education</a>
+                <a href="#publications">Publications</a>
                 <a href="#projects">Projects</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -56,7 +58,7 @@
         
         <!-- skills section -->
         <section class="skills" id="skills">
-            <h1 class="heading"><span>My</span>Skills</h2>
+            <h1 class="heading">Skills</h2>
             <div class="skills_container">
                     <div class="skills_box">
                     <h3>Programming Languages</h3>
@@ -81,6 +83,7 @@
                         <li>Prompt Engineering</li>
                         <li>Generative AI</li>
                         <li>Retrival Augumented Generation(RAG)</li>
+                        <li>AI Agents</li>
                     </ul>
                     </div>
                     <div class="skills_box">
@@ -138,7 +141,80 @@
                     <img src="Images/github.png" alt="Image 14">    
                 </div>
             </div>
-            <h1 class="heading"><span>My</span>Collaborations</h2>
+            <!-- <h1 class="heading"><span>My</span>Collaborations</h2> -->
+        </section>
+        <!--Work Experience-->
+        <section class="experience" id="experience">
+            <h1 class="heading">Professional <span>Experience</span></h1>
+
+            <div class="experience-container">
+                <div class="experience-card">
+                    <h2>Research Assistant,  University of Arkansas</h2>
+                    <div class="card-content">
+                        <h3>Virtual Try-On (ongoing)</h3>
+                        <span class="duration">Mar 2025 - Present</span>
+                        <p>Developed an interactive visualization tool to overlay human parsing masks on real-world images for manual correction and refinement, enabling better training data quality. Leveraged segmentation classes from the GP-VTON (CVPR 2023) model to structure parsing data for general-purpose virtual try-on systems. Worked in implementing preprocessing pipelines for 80k unlabeled images and 12k labeled human parser images, achieving 56 mIoU on a 2k-image test set using a custom-trained parser model.</p>
+                        <br>
+                        <h3>Automated Chicken Gait Estimation</h3>
+                        <span class="duration">Sep 2024 - Feb 2025</span>
+                        <p>Developed a machine learning-based system for real-time chicken gait analysis to identify leg diseases using Meta Detectron2 pose estimation model, in collaboration with Cobb. Curated and utilized a dataset of 4,250 annotated images for training(2646) and validating(1604) the model, ensuring high accuracy and reliability in gait assessment. Achieved outstanding model performance with YOLO11n-Keypoint, reaching AP50: 99.01%, and mAP(50-95): 91.83%.</p>
+                        <br>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h2>Teaching Assistant, University of Arkansas</h2>
+                    <div class="card-content">
+                        <h3>Programming Foundations(C++)</h3>
+                        <span class="duration">Fall 2025</span>
+                        <p>Conduct lab sessions, office hours, and provide mentorship for 50+ students, supporting their understanding of core C++ concepts and programming fundamentals. Create, review, and grade assignments and lab exercises, focusing on control flow, loops, functions, arrays, and debugging techniques.</p>
+                        <br>
+                        <h3>Database Management Systems</h3>
+                        <span class="duration">Spring 2025</span>
+                        <p>Contributed to the teaching of the Database Management Systems course with ~180 students, assisting the professor in course planning, content delivery, grading, and assessment development. Provided guidance to students by clarifying concepts, addressing queries during office hours, and facilitating discussions to ensure achievement of course objectives.</p>
+                        <br>
+                        <h3>Programming(Assembly Language and VHDL)</h3>
+                        <span class="duration">Fall 2024</span>
+                        <p>Instructed lab sessions covering Assembly language programming and VHDL, reinforcing theoretical concepts through hands-on implementation. Guided 35+ students across 3 lab sections, providing technical support, debugging assistance, and conceptual clarification during lab hours.</p>            
+                        <br>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h2>Project Engineer, Soliton Technologies</h2>
+                    <span class="duration">Jun 2023 - Jun 2024</span>
+                    <div class="card-content">
+                    <p>I have one year of experience as a Project Engineer at Soliton technologies, focusing on MAVIS, Soliton's proprietary test automation framework for medical devices. My role included maintaining the framework, developing features for custom solutions.</p>
+                    <br>
+                    <h3>Contract Engineer, Medtronic</h3>
+                    <p>As the sole developer, I delivered customized solutions using MAVIS for medical device testing, automating approximately 94% of manual test cases. This effort ensured compliance with stringent medical device industry standards and greatly enhanced the efficiency and reliability of the testing process.</p>
+                    <br>
+                    <h3>Contract Engineer, Drager</h3>
+                    <p>I developed a C#/WPF-based GUI to integrate multiple test automation tools, including C#, Python, and LabVIEW, streamlining workflows and improving the onboarding process for new team members. This solution significantly reduced training time and costs by providing a unified, user-friendly interface for test automation activities.</p>
+                    <br>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h2>Internships</h2>
+                    <div class="card-content">
+                    <h3>Soliton Technologies</h3>
+                    <span class="duration">Jul 2022 - May 2023</span>
+                    <p>I gained valuable experience during my internship at Soliton Technologies, focusing on LabVIEW training that enhanced my skills in Object-Oriented Programming (OOPs). Through the completion of multiple projects in LabVIEW and training in TestStand, I expanded my proficiency in automated testing and validation processes.</p>
+                    <br>
+                    <h3>National Institue of Technology</h3>
+                    <span class="duration">Sep 2021 - Oct 2021</span>
+                    <p>I designed a SIW antenna with a deep well cavity using ANSYS HFSS software during my internship at NIT, Trichy. This experience enriched my skills in electromagnetic simulation and antenna modeling, providing valuable insights into advanced antenna technologies and their applications.</p>
+                    <br>
+                    <h3>Pricol Engineering Industries Limited</h3>
+                    <span class="duration">Sep 2021 - Oct 2021</span>
+                    <p>I contributed in optimizing a pressure sensor project tailored for aircraft applications during my internship at Pricol Engineering Industries. This role deepened my understanding of sensor technology. Collaborating with industry experts provided valuable insights into aerospace engineering and project management.</p>
+                    <br>
+                    </div>
+                </div>
+
+                </div>
+
                 <div class="collaboration_container">
                     <div class="collaboration_grid">
                         <img src="Images/soliton.png" alt="Image 1">
@@ -148,115 +224,33 @@
                         <img src="Images/cobb.png" alt="Image 5">
                     </div>
                 </div>
+
+                
         </section>
+
+
 
         <!-- qualification section -->
         <section class="qualification" id="qualification">
-            <h1 class="heading">Education & <span>Experience</span></h2>
-            <div class="timeline-items">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Sep 2024 - Present)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.uark.edu/">
-                            <h3>Research Assistant</h3>
-                            <h4>at AICV Lab, University of Arkansas, Fayetteville.</h4>
-                            <h4>Automated Chicken Gait Estimation</h4>
-                            <p>Developed a machine learning-based system for real-time chicken gait analysis to identify leg diseases using Meta Detectron2 pose estimation model, in collaboration with Cobb. Curated and utilized a dataset of 4,250 annotated images for training(2646) and validating(1604) the model, ensuring high accuracy and reliability in gait assessment. Achieved outstanding model performance with YOLO11n-Keypoint, reaching AP50: 99.01%, and mAP(50-95): 91.83%.</p>
-                            <br>
-                            <h4>Virtual Try-On</h4>
-                            <p>Developed an interactive visualization tool to overlay human parsing masks on real-world images for manual correction and refinement, enabling better training data quality. Leveraged segmentation classes from the GP-VTON (CVPR 2023) model to structure parsing data for general-purpose virtual try-on systems. Worked in implementing preprocessing pipelines for 80k unlabeled images and 12k labeled human parser images, achieving 56 mIoU on a 2k-image test set using a custom-trained parser model.</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Sep 2024 - Present)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.uark.edu/">
-                            <h3>Teaching Assistant</h3>
-                            <h4>at University of Arkansas, Fayetteville.</h4>
-                            <h4>Programming Foundations(C++)</h4>
-                            <p>Conduct lab sessions, office hours, and provide mentorship for 50+ students, supporting their understanding of core C++ concepts and programming fundamentals. Create, review, and grade assignments and lab exercises, focusing on control flow, loops, functions, arrays, and debugging techniques.</p>
-                            <br>
-                            <h4>Database Management Systems</h4>
-                            <p>Contributed to the teaching of the Database Management Systems course with ~180 students, assisting the professor in course planning, content delivery, grading, and assessment development. Provided guidance to students by clarifying concepts, addressing queries during office hours, and facilitating discussions to ensure achievement of course objectives.</p>
-                            <br>
-                            <h4>Programming(Assembly Language and VHDL)</h4>
-                            <p>Instructed lab sessions covering Assembly language programming and VHDL, reinforcing theoretical concepts through hands-on implementation. Guided 35+ students across 3 lab sections, providing technical support, debugging assistance, and conceptual clarification during lab hours.</p>    
-                        </a>
-                    </div>
-                </div>
+            <h1 class="heading">Education</h2>
+            <div class="timeline-items">    
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">(Aug 2024 - Present)</div>
                     <div class="timeline-content">
-                        <a target=”_blank” href="https://www.uark.edu/">
                             <h3>MS Computer Engineering Student</h3>
                             <h4>at University of Arkansas, Fayetteville.</h4>
                             <p>I am currently pursuing Masters degree in Computer Engineering with a specialization in algorithms and databases. My academic focus includes advanced algorithms and machine learning techniques, which I am applying to build practical and efficient software solutions. I am particularly interested in leveraging my skills in software development to create impactful applications in areas such as automation, and intelligent systems.</p>
-                        </a>
                       </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Jun 2023 - Jun 2024)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.solitontech.com/">
-                            <h3>Project Engineer</h3>
-                            <h4>at Soliton Technologies Private Limited.</h4>
-                            <p>I have one year of experience as a Project Engineer at Soliton technologies, focusing on MAVIS, Soliton's proprietary test automation framework for medical devices. My role included maintaining the framework, developing features for custom solutions. I also contributed in a desktop application with a sophisticated GUI in C# and WPF. It seamlessly integrated various test automation tools in C#, LabVIEW, and Python.</p>
-                      <!-- As a dedicated Project Engineer, I possess a strong sense of ownership, consistently seeking opportunities for project expansion while prioritizing the delivery of high-quality outcomes. My approach revolves around fostering collaborative teamwork, ensuring excellence in every aspect. Additionally, I actively participate in Corporate Social Responsibility, contributing to community initiatives and demonstrating a commitment to both professional excellence and social impact. -->
-                        </a>
-                    </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">(Aug 2019 - May 2023)</div>
                     <div class="timeline-content">
-                        <a target=”_blank” href="https://srec.ac.in/">
                             <h3>BE Electronics & Communication Engineering Student</h3>
                             <h4>at Sri Ramakrishna Engineering College.</h4>
                             <p>I graduated with a CGPA of 8.55 in my undergraduate program. I have a strong foundation in programming and algorithms. Actively seeking out and participating in projects and internships, I strategically utilized these opportunities to enhance my career development.</p>                        
-                        </a>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Jul 2022 - May 2023)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.solitontech.com/">
-                            <h3>Internship Student</h3>
-                            <h4>at Soliton Technologies Private Limited.</h4>
-                            <p>I gained valuable experience during my internship at Soliton Technologies, focusing on LabVIEW training that enhanced my skills in Object-Oriented Programming (OOPs). Through the completion of multiple projects in LabVIEW and training in TestStand, I expanded my proficiency in automated testing and validation processes.</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Sep 2021 - Oct 2021)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.nitt.edu/">
-                            <h3>Internship Student</h3>
-                            <h4>at National Institute of Technogy, Trichy.</h4>
-                            <p>I designed a SIW antenna with a deep well cavity using ANSYS HFSS software during my internship at NIT, Trichy. This experience enriched my skills in electromagnetic simulation and antenna modeling, providing valuable insights into advanced antenna technologies and their applications.</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">(Sep 2021 - Oct 2021)</div>
-                    <div class="timeline-content">
-                        <a target=”_blank” href="https://www.pricolengineering.com/">
-                            <h3>Internship Student</h3>
-                            <h4>at Pricol Engineering Industries Limited.</h4>
-                            <p>I contributed in optimizing a pressure sensor project tailored for aircraft applications during my internship at Pricol Engineering Industries. This role deepened my understanding of sensor technology. Collaborating with industry experts provided valuable insights into aerospace engineering and project management.</p>
-                        </a>
                     </div>
                 </div>
 
@@ -264,16 +258,47 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">(Jun 2017 - Mar 2019)</div>
                     <div class="timeline-content">
-                        <a target=”_blank” href="https://avila.ac.in/">
                             <h3>Higher Secondary Student</h3>
                             <h4>at Avila Convent Mat. Hr. Sec. School.</h4>
                             <p>In my higher secondary education, I achieved excellent academic results, scoring 96.2% in high school and 84.3% in my higher secondary exams, with a strong performance in challenging subjects like Physics and Mathematics.</p>
-                        </a>
                     </div>
                 </div>
                 
             </div>
         </section>
+
+        <!-- publications section -->
+        <section class="publications-cloud" id="publications">
+            <h1 class="heading">Publications</h1>
+
+            <div class="cloud-wrapper">
+                <div class="publication-tag-cloud">
+                    <span class="pub-tag" data-id="pub1">MiGa: Multi-Chicken Gait Assessment</span>
+                    <span class="pub-tag" data-id="pub2">DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis</span>
+                    <span class="pub-tag" data-id="pub3">Raspberry PI-based Intelligent Car Parking System</span>
+                    <span class="pub-tag" data-id="pub4">Efficient Power Generation to Automate Street</span>
+
+                    <!-- <span class="pub-tag" data-id="pub5">Machine Learning in RF Circuit Optimization</span>
+                    <span class="pub-tag" data-id="pub6">Advanced MIMO Systems for Beyond 5G</span> -->
+                </div>
+
+                <div class="publication-viewer" id="publicationViewer">
+                    <div class="viewer-placeholder">
+                        <i class='bx bx-book-reader'></i>
+                        <p>Click a publication title to view details.</p>
+                    </div>
+                    <div class="viewer-content">
+                        <h3 class="viewer-title"></h3>
+                        <p class="viewer-meta"></p>
+                        <p class="viewer-abstract"></p>
+                        <a class="viewer-link" href="#" target="_blank" aria-label="View publication">
+                            <i class='bx bx-link-external'></i> Read Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- projects section -->
         <section class="latest-projects" id="projects">
@@ -358,7 +383,7 @@
         <!-- about me section -->
         <section class="about" id="about">
             <div class="about-img">
-                <img src="Images/AboutMe.png">
+                <img src="Images/MyImage.png">
             </div>
 
             <div class="about-content">
@@ -391,9 +416,7 @@
                 <div class="contactInfo-border">
                 <div class="contactInfo">
 
-                    <h2 class="info-title">Contact Information</h2>
-                    <!-- <h3 class="info-subtitle">I will get back as soon as possible.</h3> -->
-                    
+                    <h2 class="info-title">Contact Information</h2>                    
                     <ul class="info-details">
                         <li>
                             <i class='bx bxs-phone-call' ></i>
@@ -412,7 +435,6 @@
             </div>
                 <div class="form">
                     <form id="form" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- <h2 class="form-title"> Get in Touch!</h2> -->
                         <h3 class="form-subtitle">Leave a message below</h3>
                         <input type="hidden" name="access_key" value="341b676b-b69b-45d4-b7ee-b992b0e91dfe">
                         <div class="form-fields">
@@ -437,7 +459,6 @@
                                 <small>Error message</small>
                         </div>
                         <button type="submit" class="primarybtn">Submit</button>
-                        <!-- <a href="#" class="primarybtn">Submit</a> -->
                     </form>
                 </div>
                 <div id="pop-up" class="popup-container"></div>
