@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'ai': 'AI Projects',
         'electronics': 'Electronics Projects',
         'rf': 'RF Projects',
-        'others': 'Other Projects'
+        'software': 'Software Projects'
     };
 
     const openModal = (category) => {
