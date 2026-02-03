@@ -212,14 +212,14 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'MiGa: Multi-Chicken Gait Assessment',
             meta: 'Under Review in Smart Agricultural Technology Journal, 2025',
             abstract: 'Broiler chicken production is a major agricultural industry, yet it faces persistent challenges related to animal welfare most notably, lameness caused by selective breeding for rapid growth. Traditional gait assessment methods, such as Kestin scoring system, obstacle tests, and latency-to-lie, have been valuable but they are typically limited to single-bird evaluations in controlled environments, require trained personnel, and are slow due to their manual nature. In this work, we introduce MiGa, a multi-chicken gait assessment system that leverages computer vision and machine learning to automatically evaluate the gait of multiple birds simultaneously in more naturalistic settings. Our approach integrates four components: a multi-bird detector, a pose estimator, a tracking module, and a gait-score regressor. To support development and benchmarking, we introduce the GAIT dataset suite, which includes dedicated datasets for detection, pose extraction, tracking, and gait-score prediction. This system enables scalable, automated locomotion assessment in realistic multi-bird scenarios, contributing toward improved welfare monitoring in broiler production.',
-            link: 'https://uark-aicv.github.io/MiGa/'
+            link: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5357199'
         },
         {
             id: 'pub2',
             title: 'DualFit: A Two-Stage Virtual Try-On via Warping and Synthesis',
             meta: 'Accepted in RetailVisionICCV2025',
             abstract: 'Virtual Try-On (VTON) technology has garnered significant attention for its potential to transform the online fashion retail experience by allowing users to visualize how garments would look on them without physical trials. While recent advances in diffusion-based warping-free methods have improved perceptual quality, they often fail to preserve fine-grained garment details such as logos and printed text—elements that are critical for brand integrity and customer trust. In this work, we propose DualFit, a hybrid VTON pipeline that addresses this limitation by two-stage approach. In the first stage, DualFit warps the target garment to align with the person image using a learned flow field, ensuring high-fidelity preservation. In the second stage, a fidelity-preserving try-on module synthesizes the final output by blending the warped garment with preserved human regions. Particularly, to guide this process, we introduce a preserved-region input and an inpainting mask, enabling the model to retain key areas and regenerate only where necessary, particularly around garment seams. Extensive qualitative results show that DualFit achieves visually seamless try-on results while faithfully maintaining high-frequency garment details, striking an effective balance between reconstruction accuracy and perceptual realism.',
-            link: ''
+            link: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=hLyQI3IAAAAJ&authuser=1&citation_for_view=hLyQI3IAAAAJ:9yKSN-GCB0IC'
         },
         {
             id: 'pub3',
